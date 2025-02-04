@@ -35,8 +35,9 @@ from llama_index.core.selectors.llm_selectors import     LLMSingleSelector
 
 
 
+import os
 
-GOOGLE_API_KEY = "AIzaSyAQKESf1NzOewpZ8InR9emIxMyG8VF9bzs"  # add your GOOGLE API key here
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")  # Fetch key from environment variables
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
 
